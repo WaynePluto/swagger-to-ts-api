@@ -27,8 +27,7 @@ export function toPascalCase(str) {
   return capitalizedParts.join("");
 }
 
-export function writeToFile(content: string, fileName: string) {
-  const filePath = path.join(__dirname, "../../", "dist", fileName);
+export function writeToFile(content: string, filePath: string) {
   const dirPath = path.dirname(filePath);
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
